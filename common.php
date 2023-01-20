@@ -6,8 +6,6 @@ define("EXAMPLE_LIST_ID", '((list id))');
 define('BASE_URL', 'https://interface.experience-hotel.com/api/sending-list-csv');
 
 
-
-
 function curlGet(string $path)
 {
 
@@ -36,7 +34,7 @@ function curlPost(string $path, array $data, string $verb = 'POST')
     $token = PARTNER_TOKEN . ':' . HOTEL_TOKEN;
 
     $url = BASE_URL . $path;
-    echo $url . "\n";
+
     curl_setopt_array($ch, [
         CURLOPT_HTTPHEADER => [
             'Content-Type: application/json',
